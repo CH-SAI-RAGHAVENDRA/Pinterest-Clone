@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { UserData } from "./context/UserContext";
 import { Loading } from "./components/Loading";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 import PinPage from "./pages/PinPage";
 import Create from "./pages/Create";
 import Account from "./pages/Account";
