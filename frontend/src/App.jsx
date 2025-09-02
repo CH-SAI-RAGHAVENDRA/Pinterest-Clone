@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { UserData } from "./context/UserContext";
 import { Loading } from "./components/Loading";
-import Navbar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import PinPage from "./pages/PinPage";
 import Create from "./pages/Create";
 import Account from "./pages/Account";
@@ -18,7 +18,7 @@ const App = () => {
         <Loading />
       ) : (
         <BrowserRouter>
-          {isAuth && <Navbar user={user}/>}
+          {isAuth && <NavBar user={user}/>}
           <Routes>
             <Route path="/" element={isAuth ? <Home /> : <Login />} />
             <Route path="/create" element={isAuth ? <Create /> : <Login />} />
