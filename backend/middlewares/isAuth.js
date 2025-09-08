@@ -10,7 +10,7 @@ export const isAuth=async(req,res,next)=>{
         });
         const decodedData=jwt.verify(token,process.env.JWT_SEC);
         if(!decodedData)
-            res.status(400).json({
+            return res.status(400).json({
             message:"Token expired"
         });
         req.user=await User.findById(decodedData.id);
